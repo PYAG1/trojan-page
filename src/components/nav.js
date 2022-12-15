@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRef } from 'react';
 import { GiClosedBarbute } from "react-icons/gi";
-import { NavLink,Link } from 'react-router-dom';
+import { NavLink,Link, useNavigate } from 'react-router-dom';
 import { FaTimes,FaStream} from "react-icons/fa";
 import {
   AiFillTwitterCircle,
@@ -11,12 +11,7 @@ import {
 import { useState } from 'react';
 
 export default function Nav() {
-  const NavR= useRef();
-
-
-  const show=()=>{
-      NavR.current.classList.toggle("responsive");
-  }
+const move= useNavigate()
 
   const [nav, setNav]=useState(false)
 
@@ -70,23 +65,26 @@ export default function Nav() {
                   <div className=' flex flex-col justify-between items-center  md:h-[550px] '>
 
                     <ul>
-                      <Link to='/'>
-                        <li className='text-xl py-[1em] md:text-3xl font-medium'>Home</li>
+                      <Link to='/' >
+                        <li className='text-xl py-[1em] md:text-3xl font-medium' onClick={handlenav}>Home</li>
                       </Link>
 
                       <Link to='/about'>
-                        <li className='text-xl py-[1em] md:text-3xl font-medium'>About</li>
+                        <li className='text-xl py-[1em] md:text-3xl font-medium' onClick={handlenav}>About</li>
                       </Link>
 
                       <Link to='/login'>
-                        <li className='text-xl py-[1em] md:text-3xl font-medium'>Login</li>
+                        <li className='text-xl py-[1em] md:text-3xl font-medium' onClick={handlenav}>Login</li>
                       </Link>
 
                       
                     </ul>
 
                     <div className='pt-[4em] border-t-2'>
-                      <button className='w-[120px] h-[50px] bg-[black] text-center rounded-3xl text-lg text-white md:mt-3 md:w-[140px] md:h-[60px]'>Sign Up</button>
+                      <button className='w-[120px] h-[50px] bg-[black] text-center rounded-3xl text-lg text-white md:mt-3 md:w-[140px] md:h-[60px]' onClick={()=>{move('/signup')
+                      handlenav()
+                    
+                    }}>Sign Up</button>
                       <div className="text-3xl flex justify-center gap-6 py-8 text-[#21455a]">
                       <a href="https://twitter.com/pyaggg0"> <AiFillTwitterCircle /></a>
             <a href="https://github.com/PYAG1">  <AiFillGithub/></a>

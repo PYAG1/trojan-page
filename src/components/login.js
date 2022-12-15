@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Login() {
   return (
-    <div className=' h-screen z-10 flex bg-[#1d1d1f]    items-center   md:justify-center'>
+    <div className=' h-screen z-10 flex bg-[#1d1d1f] p-6    items-center   md:justify-center'>
 
     <div className=' flex flex-col justify-evenly w-full h-[400px] bg-[#39383d] text-white border-2 border-black p-5 rounded-3xl md:w-[350px] md:h-[350px]'>
     <p className=' text-4xl font-[Oswald] '>Login</p>
