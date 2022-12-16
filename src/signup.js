@@ -1,12 +1,32 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from './context.js/contex';
+import { FaEye ,FaEyeSlash} from 'react-icons/fa';
 
 export default function Signup() {
     const move= useNavigate();
-    const [user, setUser]= useState()
-    const [pass, setPass]= useState()
-    const {users}= useAuth() 
+ const [user,setUser]= useState('')
+ const [pasw,setpass]= useState('')
+    const {users,contacts}= useAuth() 
+
+    const [show,setshow]= useState(false)
+
+    console.log(contacts)
+
+    const texts= show ? "text" : "password";
+
+
+
+
+    function submit(e){
+      e.preventDefault()
+      users(user,pasw
+
+
+      )
+    }
+
+ 
 
     
     //bg-[#1d1d1f]  
@@ -18,23 +38,20 @@ export default function Signup() {
            <form className=' flex flex-col justify-evenly items-center h-full '>
             <div>
            <label htmlFor='username' className=' font-[Oswald]  text-2xl font-medium '>Username</label>
-            <input type="text" id='username' name="username" className='mt-[.5em] w-full h-[35px] p-1 placeholder:p-1  text-black  placeholder:text-black' placeholder='Enter your username' onChange={(e)=>setUser(e.target.value)}/>
+            <input type="text" id='username' name="username" className='mt-[.5em] w-full h-[35px] p-1 placeholder:p-1  text-black  placeholder:text-black' placeholder='Enter your username ' onChange={(e)=>setUser(e.target.value)} />
             </div>
             <div>
            <label htmlFor='password' className=' text-2xl font-medium font-[Oswald] '>Password</label>
-            <input type="password" id='password' name="password" className='mt-[.5em] w-full h-[35px] text-black p-1 placeholder:p-1 placeholder:text-black' placeholder='Enter your password' onChange={(e)=>setPass(e.target.value)}  />
+         
+            <input type={texts} id='password' name="password" className='mt-[.5em] w-full h-[35px] text-black p-1 placeholder:p-1 placeholder:text-black' placeholder='Enter your password ' onChange={(e)=> setpass(e.target.value)}  />
+            <FaEye onClick={()=>setshow(!show)} className=' absolute right-[4em] text-black top-[27.4em]'/>
+            <FaEyeSlash  className=' absolute right-[4em] text-black top-[27.4em]'/>
+          
             </div>
 
-            <button className=' w-[100px] h-[50px] bg-[#37586b] rounded-3xl text-white text-base font-medium transition-transform hover:bg-white hover:text-[#37586b] ' onSubmit={
-              (e)=>{
-                e.preventDefault()
-                users()
-                move("/login") 
+            <p onClick={()=>  move("/login") }>login</p>
 
-
-                         
-                         
-                         }}> Sign up</button>
+            <button className=' w-[100px] h-[50px] bg-[#37586b] rounded-3xl text-white text-base font-medium transition-transform hover:bg-white hover:text-[#37586b] ' onClick={submit}> Sign up</button>
 
 
            </form>

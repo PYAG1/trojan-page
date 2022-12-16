@@ -11,6 +11,8 @@ import {
 import { useState } from 'react';
 
 export default function Nav() {
+
+  
 const move= useNavigate()
 
   const [nav, setNav]=useState(false)

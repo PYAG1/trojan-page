@@ -28,15 +28,20 @@ export const AuthProvider=({children})=>{
     const [contacts,setContact]= React.useState([])
 
 
-    function users({user,password}){
+    function users(username,password){
+        
+        console.log(contacts)
+
         setContact((prev) => {
            return [ ...prev ,
             {id: Math.floor(Math.random()*100),
-            name:user,
-            password:password
+            name: username,
+            password: password
 
            } ]
+
         })
+
 
         
     }
@@ -50,7 +55,7 @@ export const AuthProvider=({children})=>{
 
 
 
-return <auth.Provider value={{users}}>{children}</auth.Provider>
+return <auth.Provider value={{users,contacts}}>{children}</auth.Provider>
 }
 
 
