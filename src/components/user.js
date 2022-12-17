@@ -34,7 +34,7 @@ function handlelog(){
             </div>
         </div>
 
-        <div className=' text-bold text-3xl flex justify-between font-[Oswald]  '>
+        <div className=' text-bold text-3xl flex justify-between font-[Oswald] md:justify-evenly'>
           <NavLink to="history" >
             History
           </NavLink>
