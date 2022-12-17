@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { createContext } from "react";
+import useLocalStorage from "./exta";
 
 const auth= createContext()
 
@@ -27,7 +28,7 @@ export const AuthProvider=({children})=>{
 
     const [profile,setprofile]=React.useState(null)
 
-    const [contacts,setContact]= React.useState([])
+    const [contacts,setContact]= useLocalStorage("contacts",[])
 
     const loginuser = pro =>{
         setprofile(pro)
