@@ -25,7 +25,19 @@ export const AuthProvider=({children})=>{
 
     }*/
 
+    const [profile,setprofile]=React.useState(null)
+
     const [contacts,setContact]= React.useState([])
+
+    const loginuser = pro =>{
+        setprofile(pro)
+
+    }
+
+    const logout = ()=>{
+        setprofile(null)
+    }
+
 
 
     function users(username,password){
@@ -55,7 +67,7 @@ export const AuthProvider=({children})=>{
 
 
 
-return <auth.Provider value={{users,contacts}}>{children}</auth.Provider>
+return <auth.Provider value={{users,contacts,loginuser,logout,profile}}>{children}</auth.Provider>
 }
 
 

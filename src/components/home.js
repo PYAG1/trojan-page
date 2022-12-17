@@ -1,7 +1,7 @@
 import React from 'react'
 import Footer from './footer';
 
-import {FaGlobe,FaShieldAlt ,FaHandsHelping} from 'react-icons/fa';
+import {FaGlobe,FaShieldAlt ,FaHandsHelping,FaHandHoldingUsd} from 'react-icons/fa';
 import ims from '../components/undraw_online_transactions_-02-ka.svg'
 import { useNavigate } from 'react-router-dom';
 
@@ -14,8 +14,8 @@ export default function Home() {
         <div className=' md:flex md:justify-evenly md:pt-[2em] md:items-center'>
         <img src={ims} className="flex items-center mb-[1.5em] md:w-[330px]  md:order-last lg:w-[500px] "/>
      <div>
-      <p className=' text-5xl pb-[.4em] font-[Oswald] md:mr-[1.4em] md:pb-2 lg:text-6xl lg:mr-[5em]'>Send Money the secured and fast way!</p>
-      <p className=' py-3 text-xl md:mr-3 lg:pr-[7em] '>
+      <p className=' text-5xl pb-[.4em] font-[Oswald] md:mr-[1.4em] md:pb-2 lg:text-6xl lg:mr-[3em]'>Send Money the secured and fast way!</p>
+      <p className=' py-3 text-xl md:mr-3 lg:pr-[5em] '>
        Trojan is the number one security proof and user-friendly transaction app.</p>
        
       <button className=' w-[120px] h-[40px] bg-[#21455a] text-center rounded-3xl text-lg text-white md:mt-3 md:w-[140px] md:h-[60px]' onClick={()=> nav('/signup')}>Join Us!</button>
@@ -56,8 +56,8 @@ export default function Home() {
         <h2 className=' text-2xl pb-6 mb-[1.5em] border-b-4 border-indigo-500'>What We Offer</h2>
 
 
-<div>
-        <div className=' w-full h-[200px] bg-[#39383d] p-[2em] flex flex-col justify-evenly items-center rounded-[1.5em] mb-7 '>
+<div className=' md:flex md:flex-wrap md:justify-evenly'>
+        <div className=' w-full h-[200px] md:w-[40%] bg-[#39383d] p-[2em] flex flex-col justify-evenly items-center rounded-[1.5em] mb-7 '>
           <div className=' text-[#fae1d0]'>
           <FaGlobe size={40}/>
 
@@ -70,7 +70,7 @@ export default function Home() {
 
         </div>
 
-        <div className=' w-full h-[200px] bg-[#39383d] p-[2em] flex flex-col justify-evenly items-center rounded-[1.5em] mb-7'>
+        <div className=' w-full h-[200px] md:w-[40%]   bg-[#39383d] p-[2em] flex flex-col justify-evenly items-center rounded-[1.5em] mb-7'>
           <div className=' text-[#afc170]' >
           <FaHandsHelping size={40}/>
 
@@ -83,7 +83,7 @@ export default function Home() {
 
         </div>
 
-        <div className=' w-full h-[200px] bg-[#39383d] p-[2em] flex flex-col justify-evenly items-center rounded-[1.5em] mb-7 '>
+        <div className=' w-full h-[200px] md:w-[40%]  bg-[#39383d] p-[2em] flex flex-col justify-evenly items-center rounded-[1.5em] mb-7 '>
           <div className=' text-[#9a82bf]'>
           <FaShieldAlt size={40}/>
 

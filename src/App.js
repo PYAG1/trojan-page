@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import About from "./components/About";
+import Finalfile from "./components/finalfile";
 import Home from "./components/home";
 import Login from "./components/login";
 import Nav from "./components/nav";
@@ -18,8 +19,8 @@ function App() {
         <Route path='about' element={<About/>} />
         <Route path='login' element={<Login/>} />
         <Route path='/signup' element={<Signup/>}/>
-        <Route path='/user' element={<User/>}>
-      </Route>
+        <Route path='/user' element={<Finalfile><User/></Finalfile>  }/>
+     
         
 
       </Routes>

@@ -1,16 +1,18 @@
 import React from 'react';
-import { useRef } from 'react';
 import { GiClosedBarbute } from "react-icons/gi";
-import { NavLink,Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaTimes,FaStream} from "react-icons/fa";
 import {
   AiFillTwitterCircle,
   AiFillLinkedin,
-  AiFillMail,AiFillGithub
+  AiFillGithub
 } from "react-icons/ai";
 import { useState } from 'react';
+import { useAuth } from '../context.js/contex';
 
 export default function Nav() {
+
+  const {profile,contacts} = useAuth()
 
   
 const move= useNavigate()
@@ -41,9 +43,16 @@ const move= useNavigate()
                         <li className='text-xl  px-7 hover:font-medium'>About</li>
                       </Link>
 
-                      <Link to='/login'>
-                        <li className='text-xl   px-7  hover:font-medium'>Login</li>
+
+               
+                      <Link to='/user'>
+                        <li className='text-xl   px-7  hover:font-medium'>Profile</li>
                       </Link>
+
+                      
+                      { profile === null  &&  <Link to='/login'>
+                        <li className='text-xl   px-7  hover:font-medium'>Login</li>
+                      </Link>}
 
                       
                     </ul>
@@ -57,14 +66,14 @@ const move= useNavigate()
             <div className={nav ? ' lg:hidden fixed left-0 top-0 w-full h-screen bg-black/70' : ''}>
 
 
-              <div className={nav ?'fixed right-0 top-0 w-[55%] sm:w-[40%] md:w-[60%]  h-screen bg-white p-10 md:p-5 ease-in duration-500 ': ' h-screen fixed right-[-100%] top-[0] ease-in duration-500 '}>
+              <div className={nav ?'fixed right-0 top-0 w-[55%] sm:w-[40%] md:w-[60%]  h-screen bg-white p-10 md:p-5 ease-in duration-500   ': ' h-screen fixed right-[-100%] top-[0] ease-in duration-500 '}>
             
                   <div className=' flex justify-end mb-16'>
                     <FaTimes onClick={handlenav} size={40}/>
 
                   </div>
 
-                  <div className=' flex flex-col justify-between items-center  md:h-[550px] '>
+                  <div className=' flex flex-col justify-between items-center   md:h-[550px] '>
 
                     <ul>
                       <Link to='/' >
@@ -74,10 +83,15 @@ const move= useNavigate()
                       <Link to='/about'>
                         <li className='text-xl py-[1em] md:text-3xl font-medium' onClick={handlenav}>About</li>
                       </Link>
-
-                      <Link to='/login'>
-                        <li className='text-xl py-[1em] md:text-3xl font-medium' onClick={handlenav}>Login</li>
+     
+                  
+           <Link to='/user' >
+                        <li className='text-xl py-[1em] md:text-3xl font-medium' onClick={handlenav}>Profile</li>
                       </Link>
+
+                  { profile === null && <Link to='/login'>
+                        <li className='text-xl py-[1em] md:text-3xl font-medium' onClick={handlenav}>Login</li>
+                      </Link>}
 
                       
                     </ul>
