@@ -1,6 +1,6 @@
 import React from 'react'
 import { useAuth } from '../context.js/contex'
-import { Outlet, useNavigate,Link,NavLink } from 'react-router-dom';
+import { Outlet, useNavigate,NavLink } from 'react-router-dom';
 
 export default function User() {
   const {profile,logout}= useAuth();
@@ -26,7 +26,7 @@ function handlelog(){
                 <p className=' text-2xl mb-5'>Total Balance</p>
                 <div className=' flex'>
                     <p className=' text-2xl md:text-3xl'>$</p>
-                    <p className='pt-5 pl-5 text-6xl md:ml-[2em] '>{Math.floor(Math.random()*1000)}.00</p>
+                    <p className='pt-5 pl-5 text-6xl md:ml-[2em] '>{profile.length*1000}.00</p>
                     
 
                 </div>
