@@ -24,8 +24,10 @@ function App() {
         <Route path='/signup' element={<Signup/>}/>
         <Route path='*' element={<Eror404/>}/>
         <Route path='/user' element={<Finalfile><User/></Finalfile>}>
+        <Route index element={<History/>}/>
           <Route path='history' element={<History/>}/>
           <Route path='norecent' element={<Nohistory/>}/>
+          
         
           </Route>
      

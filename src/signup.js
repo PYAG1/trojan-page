@@ -29,7 +29,7 @@
           setdisplay(true)
         }
         else{
-          if(pasw.length >= 8 && user.length !== ''){
+          if(pasw.length >= 6 && user.length !== ''){
         users(user.trim(),pasw)
         move("/login") 
       }
