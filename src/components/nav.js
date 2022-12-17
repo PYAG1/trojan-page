@@ -74,7 +74,7 @@ const move= useNavigate()
             <div className={nav ? ' bg-fixed overflow-hidden lg:hidden fixed left-0 top-0 w-full h-full bg-black/70' : ''}>
 
 
-              <div className={nav ?'fixed right-0 top-0 w-[55%] sm:w-[40%] md:w-[60%] overflow-hidden  h-full bg-white p-10 md:p-5 ease-in duration-500   ': ' h-full fixed right-[-100%] top-[0] ease-in duration-500 '}>
+              <div className={nav ?'bg-fixed  fixed right-0 top-0 w-[55%] sm:w-[40%] md:w-[60%] overflow-hidden  h-full bg-white p-10 md:p-5 ease-in duration-500   ': ' bg-fixed  h-full fixed right-[-100%] top-[0] ease-in duration-500 '}>
             
                   <div className=' flex justify-end mb-16'>
                     <FaTimes onClick={handlenav} size={40}/>
