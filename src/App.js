@@ -7,6 +7,9 @@ import Login from "./components/login";
 import Nav from "./components/nav";
 import User from "./components/user";
 import Signup from "./signup";
+import History from "./components/new";
+import Eror404 from "./eror404";
+import Nohistory from "./components/Norecent";
 
 
 function App() {
@@ -19,7 +22,12 @@ function App() {
         <Route path='about' element={<About/>} />
         <Route path='login' element={<Login/>} />
         <Route path='/signup' element={<Signup/>}/>
-        <Route path='/user' element={<Finalfile><User/></Finalfile>  }/>
+        <Route path='*' element={<Eror404/>}/>
+        <Route path='/user' element={<Finalfile><User/></Finalfile>}>
+          <Route path='history' element={<History/>}/>
+          <Route path='norecent' element={<Nohistory/>}/>
+        
+          </Route>
      
         
 

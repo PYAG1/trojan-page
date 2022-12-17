@@ -17,7 +17,10 @@ code {
 nav ul li{
   margin:0 1em;
 }
-
+.active{
+  text-decoration: underline;
+  color:#27536c;
+}
 
 nav{
   transition: 1s;

@@ -18,7 +18,7 @@ export default function Home() {
       <p className=' py-3 text-xl md:mr-3 lg:pr-[5em] '>
        Trojan is the number one security proof and user-friendly transaction app.</p>
        
-      <button className=' w-[120px] h-[40px] bg-[#21455a] text-center rounded-3xl text-lg text-white md:mt-3 md:w-[140px] md:h-[60px]' onClick={()=> nav('/signup')}>Join Us!</button>
+      <button className=' w-[120px] h-[40px] bg-[#21455a] text-center rounded-3xl text-lg text-white md:mt-3 md:w-[140px] md:h-[60px] hover:bg-white hover:text-[#21455a] hover:font-bold' onClick={()=> nav('/signup')}>Join Us!</button>
        </div>
       </div>
 
@@ -26,7 +26,7 @@ export default function Home() {
 
    
       
-      <section className=' flex justify-evenly text-center pt-10 pb-12'>
+      <section className=' flex justify-evenly text-center pt-[2em] pb-12 lg:mb-[3em]'>
 
         <div className="box p-1 w-[9.5rem]">
           <p className=' font-bold text-xl'>
@@ -52,12 +52,12 @@ export default function Home() {
 
 
 
-      <section className=' bg-[#1d1d1f] text-white h-max w-full p-6 '>
+      <section className=' bg-[#1d1d1f] text-white h-max w-full p-6 mb-[3em] '>
         <h2 className=' text-2xl pb-6 mb-[1.5em] border-b-4 border-indigo-500'>What We Offer</h2>
 
 
 <div className=' md:flex md:flex-wrap md:justify-evenly'>
-        <div className=' w-full h-[200px] md:w-[40%] bg-[#39383d] p-[2em] flex flex-col justify-evenly items-center rounded-[1.5em] mb-7 '>
+        <div className=' w-full h-[200px] md:w-[40%]  md:h-[250px]   bg-[#39383d] p-[2em] flex flex-col justify-evenly items-center rounded-[1.5em] mb-7 '>
           <div className=' text-[#fae1d0]'>
           <FaGlobe size={40}/>
 
@@ -70,7 +70,7 @@ export default function Home() {
 
         </div>
 
-        <div className=' w-full h-[200px] md:w-[40%]   bg-[#39383d] p-[2em] flex flex-col justify-evenly items-center rounded-[1.5em] mb-7'>
+        <div className=' w-full h-[200px] md:w-[40%]  md:h-[250px]     bg-[#39383d] p-[2em] flex flex-col justify-evenly items-center rounded-[1.5em] mb-7'>
           <div className=' text-[#afc170]' >
           <FaHandsHelping size={40}/>
 
@@ -83,9 +83,22 @@ export default function Home() {
 
         </div>
 
-        <div className=' w-full h-[200px] md:w-[40%]  bg-[#39383d] p-[2em] flex flex-col justify-evenly items-center rounded-[1.5em] mb-7 '>
+        <div className=' w-full h-[200px] md:w-[40%]  md:h-[250px]    bg-[#39383d] p-[2em] flex flex-col justify-evenly items-center rounded-[1.5em] mb-7 '>
           <div className=' text-[#9a82bf]'>
           <FaShieldAlt size={40}/>
+
+
+          </div>
+          <p>
+          Secure and Safe transactions
+          </p>
+
+
+        </div>
+
+        <div className=' w-full h-[200px] md:w-[40%] md:h-[250px]  bg-[#39383d] p-[2em] flex flex-col justify-evenly items-center rounded-[1.5em] mb-7 '>
+          <div className=' text-[#317aa4]'>
+          <FaHandHoldingUsd size={40}/>
 
 
           </div>

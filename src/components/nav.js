@@ -30,11 +30,12 @@ const move= useNavigate()
     <header className=' p-4 flex  items-center w-full h-[80px]'>
         <div className=' flex items-center mr-14'>
             <GiClosedBarbute size={45}/>
-            <p className=' text-3xl font-medium'>Trojan.</p>
+            <p className=' text-3xl font-medium' onClick={()=>move('/')}>Trojan.</p>
 
         </div>
        
-        <ul className='hidden lg:visible lg:items-center lg:flex '>
+        <ul className='hidden  lg:visible lg:items-center lg:flex w-[80%] justify-between '>
+          <div className='flex items-center'>
                       <Link to='/'>
                         <li className='text-xl  px-7   hover:font-medium'>Home</li>
                       </Link>
@@ -49,10 +50,17 @@ const move= useNavigate()
                         <li className='text-xl   px-7  hover:font-medium'>Profile</li>
                       </Link>
 
+
+                
+
                       
                       { profile === null  &&  <Link to='/login'>
                         <li className='text-xl   px-7  hover:font-medium'>Login</li>
                       </Link>}
+                      </div>
+               
+
+                      <button className='w-[120px] h-[40px] bg-[black] text-center rounded-3xl text-base text-white font-medium hover:bg-white hover:text-black' onClick={()=>{move('/signup')}}>Sign Up</button>
 
                       
                     </ul>
