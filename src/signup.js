@@ -25,7 +25,7 @@
 
       function submit(e){
         e.preventDefault()
-        if(user === '' && pasw === ''){
+        if(user === ''){
           setdisplay(true)
         }
         else{
@@ -78,10 +78,10 @@
               <button className=' my-4 w-[100px] h-[50px] bg-[#37586b] rounded-3xl text-white text-base font-medium transition-transform hover:bg-white hover:text-[#37586b] ' onClick={submit}> Sign up</button>
               
           {display && <Alert className=' md:pb-7 lg:pb-10' severity="error">
-          Invalid username or password </Alert>}
+          Username field must be filled</Alert>}
 
           {erroec && <Alert className=' md:pb-7 lg:pb-10' severity="error">
-        Input correct username or password </Alert>}
+         Password must be at least six digits long </Alert>}
 
 
             </form>
